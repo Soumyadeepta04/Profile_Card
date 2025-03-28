@@ -4,44 +4,50 @@
   font-family: sans-serif;
   box-sizing: border-box;
 }
+
 .profile {
-  width: 100%;
-  height: 100vh;
+  width: 100vw; /* Full width */
+  min-height: 100vh; /* Full height */
   background-color: black;
   text-align: center;
   padding: 30px;
   color: white;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 main {
   width: 450px;
-  height: auto;
   border-radius: 10px;
   background-color: #1f1f1f;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
 }
+
 #logo {
   border-radius: 50%;
   width: 150px;
   height: 150px;
-  margin: 45px 0 30px 0;
+  margin: 20px 0;
 }
+
 .location {
   margin-top: 5px;
   color: #c9e660;
   font-size: 14px;
 }
+
 .description {
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 14px;
 }
 
 section {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers items horizontally */
-  gap: 10px; /* Adds spacing between links */
+  align-items: center;
+  gap: 12px; /* Adds spacing between links */
   padding: 20px;
 }
 
@@ -49,7 +55,8 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 350px;
+  width: 90%;
+  max-width: 350px;
   height: 50px;
   border-radius: 10px;
   background-color: #333333;
@@ -57,10 +64,30 @@ section {
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
-  transition: 0.3s;
+  transition: all 0.3s ease-in-out;
 }
 
 .profile-link:hover {
   background-color: #555555;
-  transform: scale(1.05); /* Slight zoom effect on hover */
+  transform: scale(1.05); /* Smooth hover effect */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  main {
+    width: 90%;
+    padding: 15px;
+  }
+
+  #logo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .profile-link {
+    width: 100%;
+    font-size: 14px;
+    height: auto;
+    padding: 12px;
+  }
 }
