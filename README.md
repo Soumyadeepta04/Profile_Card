@@ -16,6 +16,4 @@ This is a simple profile card built using HTML and CSS.
 ## Technologies Used  
 - HTML  
 - CSS  
-
-## How to Use  
-1. Clone the repository  
+ 
